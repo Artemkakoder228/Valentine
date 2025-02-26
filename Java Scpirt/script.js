@@ -30,7 +30,33 @@ document.getElementById('btn_wishes').addEventListener('click', function() {
 
     let index = Math.floor(Math.random() * arrayOfLoveWishes.length);
 
-    console.log('Номер елементу масиву: ', index);
+    // console.log('Номер елементу масиву: ', index);
 
     document.getElementById('p_wishes').innerText = arrayOfLoveWishes[index];
 })
+
+let countOfHearts = 5;
+console.log('countOfHearts: ' + countOfHearts);
+
+document.getElementById('heartsforwishes').innerText = '💖' .repeat(countOfHearts)
+
+document.getElementById('btn_wishes').addEventListener('click', ()=> { 
+  countOfHearts--;
+  console.log('countOfHearts: ' + countOfHearts);
+  document.getElementById('heartsforwishes').innerText = '💖' .repeat(countOfHearts) + '🤍' .repeat(5-countOfHearts);
+
+  if (countOfHearts == 0) {
+    document.getElementById('btn_wishes').style.display = 'none';
+  }
+});
+
+document.getElementById('btnbuyhearts').addEventListener('click', ()=> {
+
+  countOfHearts = 5;
+  document.getElementById('heartsforwishes').innerText = '💖' .repeat(countOfHearts);
+  document.getElementById('btn_wishes').style.display = 'inline-block';
+  document.getElementById('p_wishes').innerText = '';
+
+  console.log('btnbuyhearts clicked!');
+});
+

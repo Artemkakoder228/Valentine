@@ -68,14 +68,6 @@ h2 {
   font-weight: bold;
 }
 
-.site-footer {
-  margin-top: 20px;
-  padding: 10px;
-  color: #fff;
-  background: #b20e40;
-  border-radius: 8px;
-}
-
 .wishes{
   margin-top: 30px;
   display: flex;
@@ -102,4 +94,23 @@ h2 {
   line-height: 40px;
   color: #b20e40;
   text-align: justify;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.site-footer p {
+  background-color: #ffb6c1;
+  padding: 10px 20px;
+  border-radius: 0 10px;
+  border: 1px solid #b20e40;
+  color: #fff;
+  cursor: pointer;
+}
+
+.site-footer p:last-child {
+  cursor: progress;
 }
